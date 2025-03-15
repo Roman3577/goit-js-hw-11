@@ -31,13 +31,8 @@ form.addEventListener("submit", event => {
     if (images.length > 0) {
       renderImages(images, gallery);
       lightbox.refresh();
-    } else {
-      iziToast.info({
-        title: "No Images",
-        message: "No images found for your query.",
-        position: "topRight"
-      });
-    }
+      } 
+      return;
   }).catch(error => {
 
     console.error("Error fetching images:", error);
